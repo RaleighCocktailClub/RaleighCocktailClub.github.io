@@ -36,9 +36,10 @@
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'assets/1.jpg': 'center',
-							'assets/2.jpg': 'center',
-							'assets/3.jpg': 'center'
+							'http://theraleighcocktail.club/assets/images/1.jpg': 'center',
+							'http://theraleighcocktail.club/assets/images/2.jpg': 'center',
+							'http://theraleighcocktail.club/assets/images/3.jpg': 'center',
+							'http://theraleighcocktail.club/assets/images/4.jpg': 'center'
 						},
 
 					// Delay.
