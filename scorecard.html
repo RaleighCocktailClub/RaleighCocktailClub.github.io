@@ -1,5 +1,11 @@
 <html>
   <head>
+    <style>
+      table {
+        width: 49%;
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <table border=1>
@@ -67,5 +73,11 @@
         </tr>
       </body>
     </table>
+    <script>
+      var table = document.getElementsByTagName('table')[0]
+      document.body.appendChild(table.cloneNode(true))
+      document.body.appendChild(table.cloneNode(true))
+      document.body.appendChild(table.cloneNode(true))
+    </script>
   </body>
 </html>
