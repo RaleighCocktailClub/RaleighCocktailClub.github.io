@@ -1,83 +1,144 @@
 <html>
   <head>
     <style>
-      table {
-        width: 49%;
+      body {
+        font-size: 14px;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      section {
+        width: 50%;
         display: inline-block;
+      }
+      h1 {
+        font-size: 1em;
+      }
+      table {
+        border: none;
+        border-collapse: collapse;
+        font-size: inherit;
+        width: 100%;
+      }
+      td {
+        border: solid thin;
+        padding: 0 1%;
+        font-size: 0.8em;
+      }
+      td:first-child {
+        border-left: none;
+      }
+      td:last-child {
+        border-right: none;
+      }
+      td:nth-of-type(2) {
+        vertical-align: bottom;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      sup {
+        margin-bottom: 3em;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.6em;
+      }
+      sub {
+        text-align: right;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0.2em;
+        opacity: 0.7;
+        margin-top: 3.3em;
+      }
+      img {
+        width: 1.3em;
+      }
+      small {
+        font-size: 0.7em;
+        opacity: 0.7;
       }
     </style>
   </head>
   <body>
-    <table border=1>
-      <tbody>
-        <tr>
-          <td width="30%">Business Name</td>
-          <td colspan=2></td>
-        </tr>
-        <tr>
-          <td>Cocktail</td>
-          <td colspan=2></td>
-        </tr>
-        <tr>
-          <td>Price</td>
-          <td colspan=2></td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td colspan=2></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td width="10%">Score</td>
-          <td>Notes</td>
-        </tr>
-        <tr>
-          <td>
-            <div>Balance</div>
-            <small>A perfectly balanced cocktail is divine. Is the drink too sour, too sweet or is it superbly balanced? (0-5)</small>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <div>Presentation</div>
-            <small>The glass and general visual appearance of a cocktail and garnish affect its appeal and points will be awarded accordingly. (0-5)</small>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <div>Aroma</div>
-            <small>The aroma of the cocktail should be appealing and entice the drinker. (0-5)</small>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <div>Taste</div>
-            <small>A cocktail should be pleasing. Is this one just palatable, taste refreshing or is it truly delicious? (0-10)</small>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <div>Delivery</div>
-            <small>Interaction between bartender and customer is fundamental to good service and so judges should reward efficient, stylish and hygienic preparation as well as a confident and entertaining delivery with commentary that demonstrates knowledge. (0-5)</small>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-      </body>
-    </table>
+    <section>
+      <h1>
+        <img src="/assets/images/logo.png">
+        <span>The Raleigh Cocktail Club</span>
+      </h1>
+      <table>
+        <tbody>
+          <tr>
+            <td><sup>Cocktail</sup></td>
+            <td><sup>Business Name</sup></td>
+          </tr>
+          <tr>
+            <td><sup>Date</sup></td>
+            <td><sup>Price</sup></td>
+          </tr>
+        </tbody>
+      </table>
+      <table style="background-color: rgba(0, 0, 0, 0.03)">
+        <tbody>
+          <tr>
+            <td width="40%"></td>
+            <td width="9%">Score</td>
+            <td>Notes</td>
+          </tr>
+          <tr>
+            <td>
+              <div>Balance</div>
+              <small>A perfectly balanced cocktail is divine. Is the drink too sour, too sweet or is it superbly balanced?</small>
+            </td>
+            <td><sub>/5</sub></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div>Presentation</div>
+              <small>The glass and general visual appearance of a cocktail and garnish affect its appeal and points will be awarded accordingly.</small>
+            </td>
+            <td><sub>/5</sub></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div>Aroma</div>
+              <small>The aroma of the cocktail should be appealing and entice the drinker.</small>
+            </td>
+            <td><sub>/5</sub></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div>Taste</div>
+              <small>A cocktail should be pleasing. Is this one just palatable, taste refreshing or is it truly delicious?</small>
+            </td>
+            <td><sub>/10</sub></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div>Delivery</div>
+              <small>The interaction between bartender and customer should be efficient and stylish. Reward hygienic preparation as well as a confident and entertaining delivery with commentary that demonstrates knowledge.</small>
+            </td>
+            <td><sub>/5</sub></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </body>
+      </table>
+    </section>
     <script>
-      var table = document.getElementsByTagName('table')[0]
-      document.body.appendChild(table.cloneNode(true))
-      document.body.appendChild(table.cloneNode(true))
-      document.body.appendChild(table.cloneNode(true))
+      var section = document.getElementsByTagName('section')[0]
+      document.body.prepend(section.cloneNode(true))
+      document.body.prepend(section.cloneNode(true))
+      document.body.prepend(section.cloneNode(true))
     </script>
   </body>
 </html>
